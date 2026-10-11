@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>QuadCam Voices</title>
+<meta name="description" content="Voice packs for EdgeTX radios, made with QuadCam. Listen to each pack before you install it.">
+<link rel="stylesheet" href="site.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>QuadCam Voices</h1>
+    <p class="lede">Voice packs for EdgeTX radios. Listen to a pack here, then install it in
+      <a href="https://github.com/noahkiss/quadcam">QuadCam</a>.</p>
+  </div>
+</header>
+<main class="wrap">
+  <section class="how" aria-labelledby="how-title">
+    <h2 id="how-title">Install a pack</h2>
+    <ol>
+      <li>In QuadCam, open <b>Gear</b> &gt; <b>Voices</b>.</li>
+      <li>Under <b>Get voice packs</b>, click <b>Refresh packs</b>.</li>
+      <li>Click <b>Install</b> next to the pack. QuadCam checks the download's hash first.</li>
+      <li>Click <b>Apply to radios…</b> to put the pack on a radio's card.</li>
+    </ol>
+  </section>
+  <section aria-labelledby="packs-title">
+    <h2 id="packs-title">Packs</h2>
+    <p id="status" class="status" role="status">Loading the pack list…</p>
+    <ul id="packs" class="packs"></ul>
+  </section>
+</main>
+<footer class="wrap foot">
+  <p><a href="https://github.com/noahkiss/quadcam-voices">Source and index</a> ·
+    <a href="https://github.com/noahkiss/quadcam-voices/blob/main/LICENSES.md">Pack licenses</a> ·
+    <a href="index.json">index.json</a></p>
+</footer>
+<audio id="player" preload="none"></audio>
+</body>
+</html>
