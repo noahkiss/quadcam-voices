@@ -26,7 +26,7 @@ its SHA-256; QuadCam refuses a download whose hash differs.
 
 QuadCam publishes a pack from its Voices page or its command line. It refuses a pack until
 the speech check heard every line right, or you accepted each line it flagged. You then
-listen through a review page, and nothing goes out until you click **Approve**. See
+listen through a review page, and nothing goes out until you click **Approve and publish**. See
 [docs/publishing.md](docs/publishing.md).
 
 ## Licenses

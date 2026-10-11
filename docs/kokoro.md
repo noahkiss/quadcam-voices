@@ -24,7 +24,7 @@ quadcam-cli --json settings set tts_provider=openai tts_base_url=http://127.0.0.
   tts_model=kokoro tts_voice=af_heart
 ```
 
-Or in the app: **Settings** > **Gear** > **Voice**. `tts_voice` is one of the server's voices
+`tts_voice` is one of the server's voices
 (`af_heart`, `am_michael`, and others). The server needs no key; if yours does, set it with
 `quadcam-cli settings set-secret tts_key`.
 
@@ -36,7 +36,7 @@ In QuadCam, open **Gear** > **Voices** and click **Render my voice**, or:
 quadcam-cli --json gear voice render
 ```
 
-QuadCam renders every line into a local pack (`local-<voice>`) and runs the speech check on
+QuadCam renders every line into a local pack (`local-openai-<voice>`) and runs the speech check on
 it (macOS 26 or later). Listen to the lines the check flags, then re-render or accept them.
 
 ## 4. Publish it
@@ -44,7 +44,7 @@ it (macOS 26 or later). Listen to the lines the check flags, then re-render or a
 Publish the local pack as in [publishing.md](publishing.md). Give it the Kokoro license:
 
 ```bash
-quadcam-cli --json gear voice publish local-af-heart --id en-kokoro-heart \
+quadcam-cli --json gear voice publish local-openai-af-heart --id en-kokoro-heart \
   --voice-name "Kokoro Heart" --license Apache-2.0 \
   --attribution "Kokoro-82M, voice af_heart"
 ```

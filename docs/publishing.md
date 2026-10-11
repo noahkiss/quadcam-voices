@@ -1,7 +1,8 @@
 # Publishing a pack
 
-QuadCam publishes a pack it rendered on your Mac (a `local-…` pack on the Voices page). It
-prepares everything first, shows you a review, and publishes only when you click **Approve**.
+QuadCam publishes a pack it rendered on your Mac (a `local-…` pack; `quadcam-cli gear voice` lists the ids). It
+prepares everything first, shows you a review, and publishes only when you click **Approve and
+publish**.
 
 ## 1. Prepare
 
@@ -9,7 +10,7 @@ On **Gear** > **Voices**, click **Publish…** on the pack's row. Fill in the pa
 voice name, license and attribution, then click **Prepare**. From a terminal:
 
 ```bash
-quadcam-cli --json gear voice publish local-callum --id en-callum --version 1 \
+quadcam-cli --json gear voice publish <pack id> --id en-callum --version 1 \
   --voice-name Callum --attribution "Voice: Callum (ElevenLabs)"
 ```
 
@@ -36,15 +37,15 @@ random, marked **Spot check**. Listen to those at least.
 
 ## 3. Approve
 
-**Approve** is the person's button. An agent can prepare and show the review (MCP
+**Approve and publish** is the person's button. An agent can prepare and show the review (MCP
 `voice_publish`), but no MCP call approves. The command line approves only from a terminal,
 where you type the pack id:
 
 ```bash
-quadcam-cli gear voice publish local-callum --approve --digest <digest from prepare>
+quadcam-cli gear voice publish <pack id> --approve --digest <digest from prepare>
 ```
 
-On Approve, QuadCam checks that the prepared files still match the review's digest, then,
+On approval, QuadCam checks that the prepared files still match the review's digest, then,
 with GitHub's `gh` installed and signed in:
 
 1. creates the release `<id>-v<version>` on this repo with the zip attached,
